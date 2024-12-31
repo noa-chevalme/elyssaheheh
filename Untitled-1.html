@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Elyssa</title>
+    <link rel="stylesheet" href="body {.css">
+</head>
+<body>
+    <div id="passwordScreen">
+        <div id="passwordPrompt">
+            <h2>Bienvenue !</h2>
+            <p>Veuillez entrer le mot de passe pour accéder au site.</p>
+            <input type="password" id="passwordInput" placeholder="Mot de passe">
+            <button onclick="checkPassword()">Entrer</button>
+        </div>
+    </div>
+
+    <div id="content">
+        <h1>Pour Elyssa</h1>
+        <p>
+            Ma douce Elyssa, étoile de mes nuits, <br>
+            Ton sourire enchante l'obscurité, <br>
+            Comme un clair de lune dans l'infini, <br>
+            Ton amour est ma plus belle vérité.<br><br>
+
+            Tes yeux, deux mers de profond mystère, <br>
+            Dans lesquels je me perds sans fin, <br>
+            Ton regard, doux et sincère, <br>
+            Est un rêve qui éveille le matin.<br><br>
+
+            Chaque mot que tu dis est une chanson, <br>
+            Une mélodie qui charme mon âme, <br>
+            Ton amour est une douce rédemption, <br>
+            Une chaleur dans les flammes.<br><br>
+
+            Elyssa, toi qui illumines ma vie, <br>
+            Sache que je t'aime à l'infini. <br>
+            Ce site est pour toi, mon amour, <br>
+            Une preuve de mon cœur, pour toujours.<br>
+        </p>
+
+        <section id="radiohead-section">
+            <h2>Radiohead : La musique de notre histoire</h2>
+            <p>Tu te souviens ? C'est en parlant de Radiohead que nos premiers échanges sont devenus des flirts.Dés que j'entends l'un de leurs sons tu hantes mes pensés.</p>
+            <div class="videos">
+                <div class="video-item">
+                    <h3>"Creep"</h3>
+                    <iframe width="560" height="315" src="Radiohead - Creep.mp4" title="Creep - Radiohead" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <h3>"Karma Police"</h3>
+                    <iframe width="560" height="315" src="Radiohead - Karma Police.mp4" title="Karma Police - Radiohead" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            if (input === 'Elyssa2025') {
+                document.getElementById('passwordScreen').classList.add('fade-out');
+                setTimeout(() => {
+                    document.getElementById('passwordScreen').style.display = 'none';
+                    document.getElementById('content').classList.add('fade-in');
+                }, 1000);
+            } else {
+                alert('Mot de passe incorrect.');
+            }
+        }
+    </script>
+</body>
+</html>
